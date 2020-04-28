@@ -1,0 +1,7 @@
+1. create a dockerfile with image instructions
+2. create a build
+   docker build --tag <tag_name>
+3. run the image
+   docker run -p 80:8080 --env-file=<env-file-name>  <tag_name> 
+4. check the endpoints
+   curl http://<endpoint>
