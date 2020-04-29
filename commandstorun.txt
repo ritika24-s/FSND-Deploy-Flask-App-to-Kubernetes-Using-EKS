@@ -1,3 +1,5 @@
+Buiding a docker
+
 1. create a dockerfile with image instructions
 2. create a build
    docker build --tag <tag_name>
@@ -5,3 +7,17 @@
    docker run -p 80:8080 --env-file=<env-file-name>  <tag_name> 
 4. check the endpoints
    curl http://<endpoint>
+
+
+Building aws eks
+1. create aws iam user
+2. configure the profile using command - aws configure
+3. verify it using - aws s3 ls
+4. create a cluster using -
+	eksctl create cluster --name <name>
+5. verify it using -
+	kubectl get nodes
+6. delete it using -
+	eksctl delete cluster --name <name> --wait
+
+Creating pipe line
